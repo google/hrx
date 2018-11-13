@@ -1,0 +1,10 @@
+<===>
+We know this is a directory because it ends with "/".
+<===> dir/
+<===>
+Directories can be nested, too.
+<===> dir/subdir/
+
+<===>
+Parent directories don't have to be defined explicitly.
+<===> other/subdir/

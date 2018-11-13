@@ -1,0 +1,5 @@
+<===> dir/file1
+This file is in a directory. Directories implicitly exist once there are any
+files in them.
+<===> path/to/file2
+This file is in a deeper directory.

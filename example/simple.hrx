@@ -1,0 +1,15 @@
+<===> input.scss
+ul {
+  margin-left: 1em;
+  li {
+    list-style-type: none;
+  }
+}
+
+<===> output.css
+ul {
+  margin-left: 1em;
+}
+ul li {
+  list-style-type: none;
+}

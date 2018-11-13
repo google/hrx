@@ -1,0 +1,8 @@
+<===> .dir/.../.file
+Filenames may contain dots, as long as they're not "." or "..".
+
+<===> ~`!@#$%^&*()_-+={}[]|:;'<,>.?
+Filenames can contain all kinds of weird characters.
+
+<===> ☃
+Non-ASCII Unicode names are allowed.
