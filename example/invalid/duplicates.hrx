@@ -1,0 +1,18 @@
+<===>
+This HRX file is valid, but the files it contains are not.
+
+<===> duplicate-files.hrx
+<======> file
+<======> file
+
+<===> duplicate-dirs.hrx
+<======> dir/
+<======> dir/
+
+<===> file-as-parent.hrx
+<======> file
+<======> file/sub
+
+<===> duplicate-despite-quotes.hrx
+<======> file
+<======> "file"

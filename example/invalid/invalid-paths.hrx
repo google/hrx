@@ -1,0 +1,51 @@
+<===>
+This HRX file is valid, but the files it contains are not.
+
+<===> initial-slash.hrx
+<======> /file
+
+<===> double-slash.hrx
+<======> dir//file
+
+<===> final-slash.hrx
+<======> dir//
+
+<===> single-dot.hrx
+<======> .
+
+<===> double-dot.hrx
+<======> ..
+
+<===> single-dot-component.hrx
+<======> dir/./file
+
+<===> double-dot-component.hrx
+<======> dir/../file
+
+<===> unmatched-quote.hrx
+<======> "file
+
+<===> inner-quote.hrx
+<======> fi"le
+
+<===> inner-quote-in-quote.hrx
+<======> "fi"le"
+
+<===> backslash.hrx
+<======> dir\file
+
+<===> raw-space.hrx
+<======> fi le
+
+<===> unknown-flag.hrx
+<======> file +a
+
+<===> invalid-ascii.hrx
+<======> ""
+
+<===> uppercase-drive.hrx
+<======> C:/file
+
+<===> lowercase-drive.hrx
+<======> c:/file
+

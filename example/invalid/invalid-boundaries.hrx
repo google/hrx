@@ -1,0 +1,15 @@
+<===>
+This HRX file is valid, but the files it contains are not.
+
+<===> none.hrx
+A HRX file must begin with a boundary.
+
+<===> empty.hrx
+<>
+
+<===> unopened.hrx
+======>
+
+<===> unclosed.hrx
+<======
+
