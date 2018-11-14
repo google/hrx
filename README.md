@@ -57,28 +57,23 @@ The syntax for a HRX file is as follows:
 &#32;
 **entry**          ::= **comment**? (**file** | **directory**)
 **comment**        ::= **boundary** **newline** **body**
-**file**           ::= **boundary** " "+ **path** **executable**? **newline** **body**?
+**file**           ::= **boundary** " "+ **path** **newline** **body**?
 **directory**      ::= **boundary** " "+ **path** "/" **newline**+
 **boundary**       ::= "<" "="+ ">" // must exactly match the first boundary in the file
-**executable**     ::= " "+ "+x"
 **newline**        ::= U+000A LINE FEED
 **body**           ::= **contents** **newline** // no newline at the end of the file
 **contents**       ::= any sequence of characters that does not include U+000A
 &#32;                  LINE FEED followed immediately by **boundary**
 &#32;
-**path**           ::= **raw-path** | **quoted-path**
-**raw-path**       ::= **path-component** ("/" **path-component**)*
-**quoted-path**    ::= '"' **path-component** ("/" **path-component**)* '"'
-**path-component** ::= (**path-character** | '\"')+ // not equal to "." or "..", not a **drive**
-**path-character** ::= any character other than U+0000 through U+001F, U+007F DELETE, U+0022
-&#32;                  QUOTATION MARK, U+002F SOLIDUS, or U+005C REVERSE SOLIDUS; or U+0020 SPACE
-&#32;                  if part of a **raw-path**
-**drive**          ::= [A-Za-z] ":"
+**path**           ::= **path-component** ("/" **path-component**)*
+**path-component** ::= (**path-character** | '\"')+ // not equal to "." or ".."
+**path-character** ::= any character other than U+0000 through U+001F, U+007F DELETE, U+002F 
+&#32;                  SOLIDUS, U+003A COLON, or U+005C REVERSE SOLIDUS
 </pre></x>
 
-Each `path` in the file must be unique, not including surrounding quotation
-marks. It's invalid for an initial subsequence of a path's components to be the
-same as another `file`'s path.
+Each `path` in the file must be codepoint-for-codepoint unique. It's invalid for
+an initial subsequence of a path's components to be the same as another `file`'s
+path.
 
 > The length of a `boundary` must be consistent throughout a given HRX file.
 > Longer or shorter `boundary`s may be included in `content` blocks, which means
@@ -109,13 +104,10 @@ directories are implicitly assumed to exist if they have entries beneath them,
 even if they aren't explicitly written as `directory`s.
 
 Each path component is a string that represents the name of that component. Path
-component names are interpreted exactly as they appear in the archive file, with
-the exception that the sequence `\"` is interpreted as U+0022 QUOTATION MARK.
+component names are interpreted exactly as they appear in the archive file.
 
 File entries with an associated `body` have their contents given by the `body`'s
-`contents` block. File entries with no `body` have empty contents. If a file has
-an `executable` marker, that indicates that the file is meant to be marked
-executable when extracted.
+`contents` block. File entries with no `body` have empty contents.
 
 ### Extracting
 

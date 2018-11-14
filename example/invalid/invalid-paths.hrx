@@ -22,30 +22,15 @@ This HRX file is valid, but the files it contains are not.
 <===> double-dot-component.hrx
 <======> dir/../file
 
-<===> unmatched-quote.hrx
-<======> "file
-
-<===> inner-quote.hrx
-<======> fi"le
-
-<===> inner-quote-in-quote.hrx
-<======> "fi"le"
-
 <===> backslash.hrx
 <======> dir\file
-
-<===> raw-space.hrx
-<======> fi le
-
-<===> unknown-flag.hrx
-<======> file +a
 
 <===> invalid-ascii.hrx
 <======> ""
 
-<===> uppercase-drive.hrx
+<===> colon.hrx
 <======> C:/file
 
-<===> lowercase-drive.hrx
-<======> c:/file
+<===> no-space-before-path.hrx
+<======>file
 
