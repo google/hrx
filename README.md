@@ -92,8 +92,8 @@ path.
 A HRX file, represented as an `archive`, contains a sequence of files and/or
 directories, each represented as an `entry`. Each entry has an optional
 `comment` that's intended to allow an archive author to include documentation or
-notes relating to that entry. This comment must not affect the contents or
-behavior of that entry.
+notes relating to that entry. This comment may contain user-defined metadata
+that applies to the following file.
 
 Each entry has a `path` which represents the relative path from the root of the
 archive to that entry. Each `path` is divided by U+002F SOLIDUS characters into
