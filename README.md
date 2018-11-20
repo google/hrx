@@ -66,7 +66,7 @@ The syntax for a HRX file is as follows:
 &#32;                  LINE FEED followed immediately by **boundary**
 &#32;
 **path**           ::= **path-component** ("/" **path-component**)*
-**path-component** ::= (**path-character** | '\"')+ // not equal to "." or ".."
+**path-component** ::= **path-character**+ // not equal to "." or ".."
 **path-character** ::= any character other than U+0000 through U+001F, U+007F DELETE, U+002F 
 &#32;                  SOLIDUS, U+003A COLON, or U+005C REVERSE SOLIDUS
 </pre></x>
