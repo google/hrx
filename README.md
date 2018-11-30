@@ -1,4 +1,4 @@
-# Human Archive (.hrx)
+# Human Readable Archive (.hrx)
 
 This is a specification for a plain-text, human-friendly format for defining
 multiple virtual text files in a single physical file, for situations when
