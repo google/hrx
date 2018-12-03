@@ -116,6 +116,4 @@ multiple physical files, they can be extracted to the physical filesystem. When
 a HRX file is extracted, the extraction process should (by default) create a
 directory named after the HRX file, with the extension `".hrx"` removed.
 
-The permissions of extracted files should match those of the original HRX file,
-except that any `file`s with an `executable` flag should be marked executable on
-disk if the operating system supports such a distinction.
+The permissions of extracted files should match those of the original HRX file.
