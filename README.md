@@ -31,13 +31,14 @@ HRX files are always encoded in UTF-8.
 
 ## Goals
 
-The HRX format is intended to make it easy to represent multiple chunks of
-plain-text data in a single physical file. It's intended to be easy for humans
-to read, edit, and create with simple text editors. It's intended to be easy to
-read and modify programatically, while generating easy-to-understand diffs for
-version control. It's intended to integrate well with tooling for
-syntax-highlighting or providing other language-specific support for individual
-files it contains.
+The HRX format is intended to make it easy to:
+
+* represent multiple chunks of plain-text data in a single physical file;
+* read, edit, and create by humans with simple text editors;
+* read and modify programatically, while generating easy-to-understand diffs for
+  version control;
+* integrate well with tooling for syntax-highlighting or providing other
+  language-specific support for individual files it contains.
 
 ### Non-Goals
 
