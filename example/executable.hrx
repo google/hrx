@@ -1,4 +1,0 @@
-<===> script.sh +x
-#!/bin/bash
-
-echo "I'm a script!"
