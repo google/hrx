@@ -60,9 +60,11 @@ The syntax for a HRX file is as follows:
 **comment**        ::= **boundary** **newline** **body**
 **file**           ::= **boundary** " "+ **path** **newline** **body**?
 **directory**      ::= **boundary** " "+ **path** "/" **newline**+
-**boundary**       ::= "<" "="+ ">" // must exactly match the first boundary in the file
+**boundary**       ::= "<" "="+ ">" // must exactly match the first boundary in the **archive**
 **newline**        ::= U+000A LINE FEED
-**body**           ::= **contents** **newline** // no newline at the end of the file
+**body**           ::= **contents** **newline** // no newline at the end of the **archive** (if the
+&#32;                                           // **archive** ends in a **body**, all trailing
+&#32;                                           // newlines are part of that **body**'s contents)
 **contents**       ::= any sequence of characters that does not include U+000A
 &#32;                  LINE FEED followed immediately by **boundary**
 &#32;
