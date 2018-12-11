@@ -1,8 +1,0 @@
-<===> "path to/my file"
-Filenames may contain spaces as long as they're quoted.
-
-<===> "file\"name"
-Filenames may contain quotes as long as they're escaped.
-
-<===> file\"name
-Even unquoted filenames may contain escaped quotes.
