@@ -34,6 +34,7 @@ HRX files are always encoded in UTF-8.
 * [Syntax](#syntax)
 * [Semantics](#semantics)
   * [Extracting](#extracting)
+* [Implementations](#implementations)
 
 ## Goals
 
@@ -128,3 +129,14 @@ a HRX file is extracted, the extraction process should (by default) create a
 directory named after the HRX file, with the extension `".hrx"` removed.
 
 The permissions of extracted files should match those of the original HRX file.
+
+## Implementations
+
+The following packages implement HRX in various languages. If you're writing an
+implementation, feel free to send a pull request to add it to the list!
+
+* [Ruby](https://github.com/google/hrx-ruby) (original/reference implementation)
+* [Python](https://github.com/rebeccajae/hrx.py)
+* [JavaScript](https://github.com/rebeccajae/hrx.js)
+* [Rust](https://github.com/nabijaczleweli/hrx.rs)
+* [Java](https://github.com/topobyte/hrx-java)
