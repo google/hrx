@@ -5,8 +5,6 @@ multiple virtual text files in a single physical file, for situations when
 creating many physical files is undesirable, such as defining test cases for a
 text format.
 
-[multipart/mixed]: https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html
-
 Here's a sample HRX that contains two files:
 
 ```hrx
@@ -29,6 +27,14 @@ ul li {
 
 HRX files are always encoded in UTF-8.
 
+## Table of Contents
+
+* [Goals](#goals)
+  * [Non-Goals](#non-goals)
+* [Syntax](#syntax)
+* [Semantics](#semantics)
+  * [Extracting](#extracting)
+
 ## Goals
 
 The HRX format is intended to make it easy to:
@@ -44,6 +50,8 @@ The HRX format is intended to make it easy to:
 
 The HRX format is not intended as a wire format. The [multipart/mixed][] format
 defined by MIME is already well-suited to that need.
+
+[multipart/mixed]: https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html
 
 The HRX format is not intended to faithfully represent any arbitrary directory
 structure. In order to ensure simplicity and human-readability, it intentionally
