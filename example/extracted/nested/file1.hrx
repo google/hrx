@@ -1,0 +1,5 @@
+<=====> nested-file1.hrx
+This is a HRX file nested within a HRX file.
+
+<=====> nested-file2.hrx
+You can tell it's not part of the outer file because the boundaries are longer.

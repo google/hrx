@@ -1,0 +1,5 @@
+<=> nested-file1.hrx
+Inner files can also contain shorter boundaries...
+
+<=> nested-file2.hrx
+...as long as they don't contain the outer file's boundary.
