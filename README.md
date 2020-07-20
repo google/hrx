@@ -5,8 +5,6 @@ multiple virtual text files in a single physical file, for situations when
 creating many physical files is undesirable, such as defining test cases for a
 text format.
 
-[multipart/mixed]: https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html
-
 Here's a sample HRX that contains two files:
 
 ```hrx
@@ -29,6 +27,15 @@ ul li {
 
 HRX files are always encoded in UTF-8.
 
+## Table of Contents
+
+* [Goals](#goals)
+  * [Non-Goals](#non-goals)
+* [Syntax](#syntax)
+* [Semantics](#semantics)
+  * [Extracting](#extracting)
+* [Implementations](#implementations)
+
 ## Goals
 
 The HRX format is intended to make it easy to:
@@ -44,6 +51,8 @@ The HRX format is intended to make it easy to:
 
 The HRX format is not intended as a wire format. The [multipart/mixed][] format
 defined by MIME is already well-suited to that need.
+
+[multipart/mixed]: https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html
 
 The HRX format is not intended to faithfully represent any arbitrary directory
 structure. In order to ensure simplicity and human-readability, it intentionally
@@ -120,3 +129,14 @@ a HRX file is extracted, the extraction process should (by default) create a
 directory named after the HRX file, with the extension `".hrx"` removed.
 
 The permissions of extracted files should match those of the original HRX file.
+
+## Implementations
+
+The following packages implement HRX in various languages. If you're writing an
+implementation, feel free to send a pull request to add it to the list!
+
+* [Ruby](https://github.com/google/hrx-ruby) (original/reference implementation)
+* [Python](https://github.com/rebeccajae/hrx.py)
+* [JavaScript](https://github.com/rebeccajae/hrx.js)
+* [Rust](https://github.com/nabijaczleweli/hrx.rs)
+* [Java](https://github.com/topobyte/hrx-java)
