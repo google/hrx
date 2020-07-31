@@ -140,3 +140,9 @@ implementation, feel free to send a pull request to add it to the list!
 * [JavaScript](https://github.com/rebeccajae/hrx.js)
 * [Rust](https://github.com/nabijaczleweli/hrx.rs)
 * [Java](https://github.com/topobyte/hrx-java)
+
+## Tooling
+
+Tooling for a nicer experience writting HRX files
+
+* [VSCode Syntax](https://marketplace.visualstudio.com/items?itemName=monasticpanic.hrx-syntax)
