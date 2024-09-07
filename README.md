@@ -79,7 +79,7 @@ The syntax for a HRX file is as follows:
 &#32;
 **path**           ::= **path-component** ("/" **path-component**)*
 **path-component** ::= **path-character**+ // not equal to "." or ".."
-**path-character** ::= any character other than U+0000 through U+001F, U+007F DELETE, U+002F 
+**path-character** ::= any character other than U+0000 through U+001F, U+007F DELETE, U+002F
 &#32;                  SOLIDUS, U+003A COLON, or U+005C REVERSE SOLIDUS
 </pre></x>
 
@@ -140,6 +140,7 @@ implementation, feel free to send a pull request to add it to the list!
 * [JavaScript](https://github.com/rebeccajae/hrx.js)
 * [Rust](https://github.com/nabijaczleweli/hrx.rs)
 * [Java](https://github.com/topobyte/hrx-java)
+* [Go](https://github.com/can3p/go-hrx)
 
 ## Tooling
 
