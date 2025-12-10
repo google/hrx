@@ -77,7 +77,7 @@ The syntax for a HRX file is as follows:
 **contents**       ::= any sequence of characters that neither begins with **boundary** nor
 &#32;                  includes U+000A LINE FEED followed immediately by **boundary**
 &#32;
-**path**           ::= **path-component** ("/" **path-component**)*
+**path**           ::= **path-component** ("/" **path-component**)* // may not start with U+0020 SPACE
 **path-component** ::= **path-character**+ // not equal to "." or ".."
 **path-character** ::= any character other than U+0000 through U+001F, U+007F DELETE, U+002F
 &#32;                  SOLIDUS, U+003A COLON, or U+005C REVERSE SOLIDUS
@@ -98,6 +98,9 @@ path.
 >
 > Directories are distinguished from empty files by the trailing "/" in the path
 > name.
+>
+> Paths may not start with a space character; spaces in that position are
+> interpreted as being part of the padding between the `boundary` and the `path`.
 
 ## Semantics
 
